@@ -9,11 +9,15 @@
 #include "tiny_timer.h"
 #include "watchdog.h"
 #include "clock.h"
+#include "data_model.h"
+#include "application.h"
+#include "bsp.h"
+
+static tiny_timer_group_t timer_group;
+static data_model_t data_model;
 
 int main(void)
 {
-  static tiny_timer_group_t timer_group;
-
   cli();
   {
     clock_init();
@@ -22,6 +26,10 @@ int main(void)
     heartbeat_init(&timer_group);
   }
   sei();
+
+  data_model_init(&data_model);
+  bsp_init(data_model_key_value_store(&data_model), &timer_group);
+  application_init(data_model_key_value_store(&data_model), &timer_group);
 
   while(1) {
     tiny_timer_group_run(&timer_group);

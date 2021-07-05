@@ -1,6 +1,7 @@
 TARGET := zumo
 MCU := atmega328p
-FRAMEWORK := tiny
+BUILD_DIR := build/target
+DEVICE_PACK := Atmel.ATmega_DFP.1.6.364
 
 # dwdebug or avrdude
 UPLOAD_TYPE := dwdebug
@@ -17,24 +18,19 @@ FUSES := \
   hfuse=0x9E \
   efuse=0xFD \
 
-BUILD_DIR := ./build/$(TARGET)
-
-DEVICE_PACK := Atmel.ATmega_DFP.1.6.364
-
 include tools/defaults.mk
 
-CXXFLAGS += \
-  -Wno-effc++ \
-
 CPPFLAGS += \
-  -flto \
-  -fwhole-program \
 
 SRC_DIRS := \
-  src/hardware/ \
+  src \
+  src/application \
+  src/bsp \
+  src/data_model \
+  src/hardware \
+  src/type \
 
 SRC_FILES := \
-  src/main.c \
 
 include lib_tiny.mk
 

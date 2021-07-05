@@ -1,5 +1,5 @@
 TARGET := tests
-BUILD_DIR := build
+BUILD_DIR := build/test
 
 INC_DIRS := \
   lib/tiny/include \
