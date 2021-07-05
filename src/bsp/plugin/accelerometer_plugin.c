@@ -26,5 +26,5 @@ void accelerometer_plugin_init(
 {
   lsm303d_init(&self.lsm303, timer_group, twi_init());
   tiny_event_subscription_init(&self.subscription, data_model, acceleration_updated);
-  tiny_event_subscribe(lsm303d_on_acceleration_update(&self.lsm303), &self.subscription);
+  tiny_event_subscribe(lsm303d_on_update(&self.lsm303), &self.subscription);
 }

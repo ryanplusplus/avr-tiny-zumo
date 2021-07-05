@@ -12,7 +12,7 @@
 #include "tiny_timer.h"
 #include "tiny_single_subscriber_event.h"
 
-typedef acceleration_t lsm303d_on_acceleration_update_t;
+typedef acceleration_t lsm303d_on_update_args_t;
 
 typedef struct {
   union {
@@ -35,6 +35,6 @@ typedef struct {
 
 void lsm303d_init(lsm303d_t* self, tiny_timer_group_t* timer_group, i_tiny_i2c_t* i2c);
 
-i_tiny_event_t* lsm303d_on_acceleration_update(lsm303d_t* self);
+i_tiny_event_t* lsm303d_on_update(lsm303d_t* self);
 
 #endif
