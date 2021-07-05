@@ -1,7 +1,7 @@
 TARGET := zumo
 MCU := atmega328p
 BUILD_DIR := build/target
-DEVICE_PACK := Atmel.ATmega_DFP.1.6.364
+DEVICE_PACK := Microchip.ATmega_DFP.2.3.126
 
 # dwdebug or avrdude
 UPLOAD_TYPE := dwdebug
