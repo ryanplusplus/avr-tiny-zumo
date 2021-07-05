@@ -7,8 +7,7 @@
 #define accelerometer_plugin_h
 
 #include "i_tiny_key_value_store.h"
-#include "tiny_event_subscription.h"
-#include "lsm303d.h"
+#include "tiny_timer.h"
 
 void accelerometer_plugin_init(
   i_tiny_key_value_store_t* data_model,

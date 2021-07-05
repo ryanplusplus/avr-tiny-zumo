@@ -25,7 +25,11 @@ CPPFLAGS += \
 SRC_DIRS := \
   src \
   src/application \
+  src/application/component \
+  src/application/plugin \
   src/bsp \
+  src/bsp/device \
+  src/bsp/plugin \
   src/data_model \
   src/hardware \
   src/type \

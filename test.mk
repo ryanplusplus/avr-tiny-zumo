@@ -9,8 +9,8 @@ INC_DIRS := \
 SRC_DIRS := \
   lib/tiny/src \
   lib/tiny/test/double \
-  src/dummy \
-  test \
+  src/application/component \
+  test/application/component \
 
 SRC_FILES := \
   lib/tiny/test/test_runner.cpp \

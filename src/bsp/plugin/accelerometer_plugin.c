@@ -5,6 +5,7 @@
 
 #include "accelerometer_plugin.h"
 #include "data_model_key_value_pairs.h"
+#include "lsm303d.h"
 #include "twi.h"
 #include "tiny_utils.h"
 
