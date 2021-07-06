@@ -10,7 +10,6 @@
 
 static struct {
   tiny_event_subscription_t on_change_subscription;
-  i_tiny_key_value_store_t* data_model;
 } self;
 
 static void data_changed(void* context, const void* _args)
@@ -54,10 +53,10 @@ void motors_plugin_init(i_tiny_key_value_store_t* data_model)
 
   // OC1A high initially, low at compare match
   // OC1B high initially, low at compare match
-  // Phase and frequency correct PWM mode (TOP set bo ICR1)
+  // Fast PWM mode (TOP set by ICR1)
   // Clk/1 (no prescalar)
-  TCCR1A |= _BV(COM1A1) | _BV(COM1B1);
-  TCCR1B |= _BV(WGM13) | _BV(CS10);
+  TCCR1A |= _BV(COM1A1) | _BV(COM1B1) | _BV(WGM11);
+  TCCR1B |= _BV(WGM13) | _BV(WGM12) | _BV(CS10);
 
   // Set max duty cycle to 100
   ICR1 = 100;

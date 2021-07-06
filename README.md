@@ -9,6 +9,7 @@
 |   D10   | PB2 |    OC1B    | Left motor power         |
 |   D7    | PD7 |    GPIO    | Right motor direction    |
 |   D9    | PB1 |    OC1A    | Right motor power        |
+|   D2    | PD2 |    GPIO    | Reflectance disable      |
 |   D4    | PD4 |    GPIO    | Outer left reflectance   |
 |   A3    | PC3 |    GPIO    | Middle left reflectance  |
 |   D11   | PB3 |    GPIO    | Inner left reflectance   |
