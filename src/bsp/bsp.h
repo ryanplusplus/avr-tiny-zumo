@@ -18,7 +18,7 @@ static inline void bsp_init(
 {
   accelerometer_plugin_init(data_model, timer_group);
   line_sensors_plugin_init(data_model, timer_group);
-  motors_plugin_init(data_model, timer_group);
+  motors_plugin_init(data_model);
 }
 
 #endif

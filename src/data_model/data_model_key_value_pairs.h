@@ -14,11 +14,11 @@
 
 // clang-format off
 #define data_model_key_value_pairs(pair) \
-  pair(key_left_motor,                  motor_power_t) \
-  pair(key_right_motor,                 motor_power_t) \
+  pair(key_left_motor_power,            motor_power_t) \
+  pair(key_right_motor_power,           motor_power_t) \
   pair(key_line_reading,                line_reading_t) \
   pair(key_acceleration,                acceleration_t) \
-  pair(key_buzzer_frequency,            buzzer_frequency_t) \
+  pair(key_buzzer_frequency,            buzzer_frequency_t)
 
 // clang-format on
 
