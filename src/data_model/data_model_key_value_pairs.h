@@ -18,7 +18,13 @@
   pair(key_right_motor_power,           motor_power_t) \
   pair(key_line_reading,                line_reading_t) \
   pair(key_acceleration,                acceleration_t) \
-  pair(key_buzzer_frequency,            buzzer_frequency_t)
+  pair(key_buzzer_frequency,            buzzer_frequency_t) \
+  pair(key_outer_left_line_detected,    bool) \
+  pair(key_middle_left_line_detected,   bool) \
+  pair(key_inner_left_line_detected,    bool) \
+  pair(key_inner_right_line_detected,   bool) \
+  pair(key_middle_right_line_detected,  bool) \
+  pair(key_outer_right_line_detected,   bool)
 
 // clang-format on
 
